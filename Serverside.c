@@ -14,6 +14,9 @@ void func(int connfd){
   int n;
   for(;;){
     bzero(buff, MAX);
-    
+    read(connfd, buff, sizeof(buff));
+    printf("From client: %s\tTo client: %s");
+    n = 0;
+    while(buff[n++]=getchar())=='\n');
   }
 }
