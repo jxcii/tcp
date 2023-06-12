@@ -18,5 +18,11 @@ void func(int connfd){
     printf("From client: %s\tTo client: %s");
     n = 0;
     while(buff[n++]=getchar())=='\n');
+    write(connfd, buff, sizeof(buff));
+    if(strncmp(buff, "exit", 4)==0){
+      printf("Server exit...\n");
+      break;
+    }
   }
 }
+S
