@@ -9,3 +9,11 @@
 #define MAX 80
 #define PORT 8080
 #define SA struct sockaddr
+void func(int connfd){
+  char buff[MAX];
+  int n;
+  for(;;){
+    bzero(buff, MAX);
+    
+  }
+}
